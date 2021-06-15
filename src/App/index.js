@@ -32,4 +32,4 @@ server.on('connection', (stream) => {
     stream.on('timeout', function() { client.destroy() ;});
 });
 
-server.listen(1883);
+server.listen(process.env.PORT || 1883);
