@@ -5,12 +5,12 @@
   "main": "index.js",
   "author": "Gabriel Gomes",
   "license": "MIT",
-  "dependencies": {
-    "fs": "^0.0.1-security",
-    "mqtt-connection": "^4.1.0",
-    "mqtt-server": "^0.1.0"
-  },
   "scripts": {
     "start": "node src/App"
+  },
+  "dependencies": {
+    "aedes": "^0.46.0",
+    "http": "^0.0.1-security",
+    "websocket-stream": "^5.5.2"
   }
 }
