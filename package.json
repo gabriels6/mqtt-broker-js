@@ -11,6 +11,7 @@
   "dependencies": {
     "aedes": "^0.46.0",
     "http": "^0.0.1-security",
+    "mqemitter": "^4.4.1",
     "websocket-stream": "^5.5.2"
   }
 }
