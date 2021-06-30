@@ -1,14 +1,10 @@
-const aedes = require('aedes')()
-const { createServer } = require('aedes-server-factory')
-//const httpServer = require("http").createServer();
-//const ws = require("websocket-stream");
-const port = process.env.PORT || 1883
+const aedes = require('aedes')();
+const net = require('net');
+const port = process.env.PORT || 1883;
 
-//ws.createServer({ server: httpServer }, aedes.handle);
+const server = net.createServer(aedes.handle);
 
-const Server = createServer(aedes)
-
-Server.listen(port, () => {
+server.listen(port, () => {
     console.log("Server listening on port: ", port);
 });
 
