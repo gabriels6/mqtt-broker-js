@@ -13,6 +13,10 @@ aedes.on('client', function (client) {
     console.log('Client Connected: \x1b[33m' + (client ? client.id : client) + '\x1b[0m', 'to broker', aedes.id)
 });
 
+aedes.on('connectionError', function(client,error){
+    console.log('Connection error on client: '+(client ? client.id : client)+'; Error:' + error)
+});
+
 aedes.authenticate = function(client,username,password,callback){
 
     console.log('Client authenticated: ' + (client ? client.id : client));
