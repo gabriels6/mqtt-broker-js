@@ -12,3 +12,18 @@ httpServer.listen(port, () => {
 aedes.on('client', function (client) {
     console.log('Client Connected: \x1b[33m' + (client ? client.id : client) + '\x1b[0m', 'to broker', aedes.id)
 });
+
+aedes.authenticate = function(client,username,password,callback){
+
+    console.log('Client authenticated: ' + (client ? client.id : client));
+
+    callback(null,true);
+}
+
+aedes.authorizePublish = function(client,packet,callback){
+    callback(null);
+}
+
+aedes.authorizeSubscribe = function(client,subscription,callback){
+    callback(null,sub);
+}
