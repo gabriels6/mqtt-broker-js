@@ -25,5 +25,5 @@ aedes.authorizePublish = function(client,packet,callback){
 }
 
 aedes.authorizeSubscribe = function(client,subscription,callback){
-    callback(null,sub);
+    callback(null,subscription);
 }
