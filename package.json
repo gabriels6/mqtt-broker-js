@@ -11,6 +11,8 @@
   "dependencies": {
     "aedes": "^0.46.0",
     "aedes-server-factory": "^0.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "http": "^0.0.1-security",
     "mqemitter": "^4.4.1",
     "websocket-stream": "^5.5.2"
