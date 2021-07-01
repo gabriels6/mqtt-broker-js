@@ -1,23 +1,19 @@
 const aedes = require('aedes')();
-const httpServer = require('http').createServer();
+const http = require('http')
 const ws = require('websocket-stream');
 
-const cors = require("cors");
-const express = require("express");
-const routes = require("../Routes");
+const httpServer = http.createServer((req,res) => {
+    res.write('0');
+    res.end();
+});
 
 const port = process.env.PORT || 1883;
 
-const app = express()
 
-app.use(cors());
-app.use(express.json());
-app.use(routes);
-
-ws.createServer({server: app }, aedes.handle);
+ws.createServer({server: httpServer }, aedes.handle);
 
 
-app.listen(port, () => {
+httpServer.listen(port, () => {
     console.log("Server listening on port: ", port);
 });
 
