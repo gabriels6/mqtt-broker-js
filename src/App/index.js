@@ -17,6 +17,10 @@ aedes.on('connectionError', function(client,error){
     console.log('Connection error on client: '+(client ? client.id : client)+'; Error:' + error)
 });
 
+aedes.on('clientError', function(client,error){
+    console.log('Client error on client: '+(client ? client.id : client)+'; Error:' + error)
+})
+
 aedes.authenticate = function(client,username,password,callback){
 
     console.log('Client authenticated: ' + (client ? client.id : client));
