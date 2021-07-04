@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "aedes": "^0.46.0",
+    "aedes-protocol-decoder": "^2.1.0",
     "aedes-server-factory": "^0.2.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
